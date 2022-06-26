@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct WeatherModel {
     let conditionId: Int
@@ -31,9 +32,30 @@ struct WeatherModel {
         case 800:
             return "sun.max"
         case 801...804:
-            return "cloud.bolt"
+            return "cloud"
         default:
             return "cloud"
+        }
+    }
+    
+    var backgroundColor: UIColor {
+        switch conditionId {
+        case 200...232:
+            return UIColor(ciColor: .gray)
+        case 300...321:
+            return UIColor(ciColor: .blue)
+        case 500...531:
+            return UIColor(ciColor: .blue)
+        case 600...622:
+            return UIColor(ciColor: .white)
+        case 701...781:
+            return UIColor(ciColor: .white)
+        case 800:
+            return UIColor(ciColor: .yellow)
+        case 801...804:
+            return UIColor(ciColor: .gray)
+        default:
+            return UIColor(ciColor: .gray)
         }
     }
 }

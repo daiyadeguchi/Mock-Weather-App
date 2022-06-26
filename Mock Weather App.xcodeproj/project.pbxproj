@@ -16,6 +16,7 @@
 		54FB40B72867EDBA000E9173 /* OpenWeather-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54FB40B62867EDBA000E9173 /* OpenWeather-Info.plist */; };
 		54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40B82867EFAE000E9173 /* WeatherData.swift */; };
 		54FB40BB2867EFDB000E9173 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40BA2867EFDB000E9173 /* WeatherModel.swift */; };
+		54FB40BD2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		54FB40B62867EDBA000E9173 /* OpenWeather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenWeather-Info.plist"; sourceTree = "<group>"; };
 		54FB40B82867EFAE000E9173 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		54FB40BA2867EFDB000E9173 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherViewController+WeatherManagerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				54FB409B28652717000E9173 /* WeatherViewController.swift */,
+				54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FB40BD2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift in Sources */,
 				54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */,
 				54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */,
 				54FB409828652717000E9173 /* AppDelegate.swift in Sources */,
