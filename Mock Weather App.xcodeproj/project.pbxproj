@@ -12,6 +12,8 @@
 		54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409B28652717000E9173 /* WeatherViewController.swift */; };
 		54FB40A128652718000E9173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FB40A028652718000E9173 /* Assets.xcassets */; };
 		54FB40A428652718000E9173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FB40A228652718000E9173 /* LaunchScreen.storyboard */; };
+		54FB40AF2867E591000E9173 /* OpenWeather-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54FB40AE2867E591000E9173 /* OpenWeather-Info.plist */; };
+		54FB40B52867E673000E9173 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40B42867E673000E9173 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		54FB40A028652718000E9173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54FB40A328652718000E9173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FB40A528652718000E9173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54FB40AE2867E591000E9173 /* OpenWeather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenWeather-Info.plist"; sourceTree = "<group>"; };
+		54FB40B42867E673000E9173 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,38 @@
 			children = (
 				54FB409728652717000E9173 /* AppDelegate.swift */,
 				54FB409928652717000E9173 /* SceneDelegate.swift */,
-				54FB409B28652717000E9173 /* WeatherViewController.swift */,
+				54FB40B32867E64C000E9173 /* Model */,
+				54FB40B22867E641000E9173 /* View */,
+				54FB40B02867E60B000E9173 /* Controller */,
 				54FB40A028652718000E9173 /* Assets.xcassets */,
 				54FB40A228652718000E9173 /* LaunchScreen.storyboard */,
 				54FB40A528652718000E9173 /* Info.plist */,
 			);
 			path = "Mock Weather App";
+			sourceTree = "<group>";
+		};
+		54FB40B02867E60B000E9173 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54FB40B22867E641000E9173 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54FB409B28652717000E9173 /* WeatherViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54FB40B32867E64C000E9173 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54FB40AE2867E591000E9173 /* OpenWeather-Info.plist */,
+				54FB40B42867E673000E9173 /* WeatherManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FB40A428652718000E9173 /* LaunchScreen.storyboard in Resources */,
+				54FB40AF2867E591000E9173 /* OpenWeather-Info.plist in Resources */,
 				54FB40A128652718000E9173 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +167,7 @@
 			files = (
 				54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */,
 				54FB409828652717000E9173 /* AppDelegate.swift in Sources */,
+				54FB40B52867E673000E9173 /* WeatherManager.swift in Sources */,
 				54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
