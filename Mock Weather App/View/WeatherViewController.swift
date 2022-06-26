@@ -9,6 +9,8 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
+    var weatherManager = WeatherManager()
+    
     private let backgroundColor: UIColor = {
         var bgColor = UIColor()
         return bgColor
@@ -16,19 +18,26 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        weatherManager.delegate = self
         setupView()
     }
     
     private func setupView() {
-        if let filePath = Bundle.main.path(forResource: "OpenWeather-Info", ofType: "plist") {
-            if let value = NSDictionary(contentsOfFile: filePath)?.object(forKey: "API_KEY") as? String {
-                print(value)
-            }
-                
-        }
-        
+        weatherManager.fetchWeather(cityName: "Tokyo")
     }
 
 
+}
+
+extension WeatherViewController: WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        print(weather)
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    
 }
 
