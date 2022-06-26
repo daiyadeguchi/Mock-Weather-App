@@ -10,11 +10,6 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
-    
-    private let backgroundColor: UIColor = {
-        var bgColor = UIColor()
-        return bgColor
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +21,4 @@ class WeatherViewController: UIViewController {
         weatherManager.fetchWeather(cityName: "Tokyo")
     }
 
-
 }
-
-extension WeatherViewController: WeatherManagerDelegate {
-    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        print(weather)
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    
-}
-
