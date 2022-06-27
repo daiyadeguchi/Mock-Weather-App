@@ -31,6 +31,13 @@ struct WeatherManager {
         }
     }
     
+    func fetchWeather(latitude: Double, longitude: Double) {
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?appid=\(apiKey)&units=metric&lat=\(latitude)&lon=\(longitude)"
+        if let safeURL = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            performRequest(with: safeURL)
+        }
+    }
+    
     func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
@@ -57,8 +64,10 @@ struct WeatherManager {
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
+            let tempMin = decodedData.main.temp_min
+            let tempMax = decodedData.main.temp_max
             
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, tempMin: tempMin, tempMax:tempMax)
             return weather
         } catch {
             delegate?.didFailWithError(error: error)
