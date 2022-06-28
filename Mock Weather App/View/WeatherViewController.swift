@@ -7,38 +7,23 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, UITableViewDelegate {
     
     var weatherManager = WeatherManager()
+    var tableView: UITableView = UITableView()
     
-    let topLabel: UITextView = {
-        let textView = UITextView()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        let attributedText = NSMutableAttributedString(string: "--")
-        textView.attributedText = attributedText
-        textView.textAlignment = .center
-        textView.isEditable = false
-        textView.isScrollEnabled = false
-        textView.backgroundColor = .clear
-        return textView
-    }()
+    let sectionTitle = [
+        "Current", "HOURLY FORECAST", "10-DAY FORECAST"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherManager.delegate = self
-        setupView()
-    }
-    
-    private func setupView() {
-        view.addSubview(topLabel)
-        weatherManager.fetchWeather(cityName: "Tokyo")
-        
-        NSLayoutConstraint.activate([
-            topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
-            topLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            topLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            topLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
+                
+        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        tableView.delegate = self
+        tableView.dataSource = self
+        view.addSubview(tableView)
+        tableView.register(CurrentWeatherCell.self, forCellReuseIdentifier: "cellId")
     }
 
 }

@@ -17,6 +17,8 @@
 		54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40B82867EFAE000E9173 /* WeatherData.swift */; };
 		54FB40BB2867EFDB000E9173 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40BA2867EFDB000E9173 /* WeatherModel.swift */; };
 		54FB40BD2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */; };
+		54FB40BF286BB375000E9173 /* CurrentWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40BE286BB375000E9173 /* CurrentWeatherCell.swift */; };
+		54FB40C1286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB40C0286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		54FB40B82867EFAE000E9173 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		54FB40BA2867EFDB000E9173 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherViewController+WeatherManagerDelegate.swift"; sourceTree = "<group>"; };
+		54FB40BE286BB375000E9173 /* CurrentWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCell.swift; sourceTree = "<group>"; };
+		54FB40C0286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherViewContorller+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			children = (
 				54FB409B28652717000E9173 /* WeatherViewController.swift */,
 				54FB40BC2869241F000E9173 /* WeatherViewController+WeatherManagerDelegate.swift */,
+				54FB40BE286BB375000E9173 /* CurrentWeatherCell.swift */,
+				54FB40C0286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 				54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */,
 				54FB409828652717000E9173 /* AppDelegate.swift in Sources */,
 				54FB40B52867E673000E9173 /* WeatherManager.swift in Sources */,
+				54FB40C1286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift in Sources */,
 				54FB40BB2867EFDB000E9173 /* WeatherModel.swift in Sources */,
+				54FB40BF286BB375000E9173 /* CurrentWeatherCell.swift in Sources */,
 				54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
