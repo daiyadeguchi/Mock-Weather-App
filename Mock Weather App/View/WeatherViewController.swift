@@ -9,7 +9,10 @@ import UIKit
 
 class WeatherViewController: UIViewController, UITableViewDelegate {
     
-    var weatherManager = WeatherManager()
+    let currentWeatherCellId = "currentWeatherCellId"
+    let hourlyWeatherCellId = "hourlyWeatherCellId"
+    let tenDayWeatherCellId = "tenDayWeatherCellId"
+    
     var tableView: UITableView = UITableView()
     
     let sectionTitle = [
@@ -17,13 +20,16 @@ class WeatherViewController: UIViewController, UITableViewDelegate {
     ]
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-                
+        super.viewDidLoad()                
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
+        tableView.separatorColor = .clear
         view.addSubview(tableView)
-        tableView.register(CurrentWeatherCell.self, forCellReuseIdentifier: "cellId")
+        
+        tableView.register(CurrentWeatherCell.self, forCellReuseIdentifier: currentWeatherCellId)
+        tableView.register(HourlyWeatherCell.self, forCellReuseIdentifier: hourlyWeatherCellId)
     }
-
+    
 }

@@ -21,11 +21,27 @@ extension WeatherViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! CurrentWeatherCell
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: currentWeatherCellId, for: indexPath) as! CurrentWeatherCell
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: hourlyWeatherCellId, for: indexPath) as! HourlyWeatherCell
+            return cell
+        } else if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: currentWeatherCellId, for: indexPath) as! CurrentWeatherCell
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 300
+        } else if indexPath.section == 1 {
+            return 80
+        } else if indexPath.section == 2 {
+            return 300
+        }
         return 300.0
     }
 }
