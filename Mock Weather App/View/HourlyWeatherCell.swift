@@ -20,7 +20,7 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = true
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = UIColor.clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -33,7 +33,7 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     private func setupWeatherCollectionView() {
-        addSubview(weatherCollectionView)
+        contentView.addSubview(weatherCollectionView)
         weatherCollectionView.register(HourlyWeatherCellCVCell.self, forCellWithReuseIdentifier: "cellId")
         
         NSLayoutConstraint.activate([
