@@ -11,6 +11,14 @@ class CurrentWeatherCell: UITableViewCell {
     
     var weatherManager = WeatherManager()
     
+    var containerView: UIView = {
+        var container = UIView()
+        container.layer.cornerRadius = 10
+        container.backgroundColor = .gray.withAlphaComponent(0.3)
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
+    }()
+    
     let topLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -26,12 +34,18 @@ class CurrentWeatherCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         weatherManager.delegate = self
         weatherManager.fetchWeather(cityName: "Tokyo")
-        addSubview(topLabel)
+        addSubview(containerView)
+        containerView.addSubview(topLabel)
         
         NSLayoutConstraint.activate([
-            topLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
-            topLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            topLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            containerView.topAnchor.constraint(equalTo: topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            topLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 50),
+            topLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            topLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             topLabel.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
