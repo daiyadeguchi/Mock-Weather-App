@@ -20,7 +20,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate {
     ]
 
     override func viewDidLoad() {
-        super.viewDidLoad()                
+        super.viewDidLoad()
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         tableView.delegate = self
         tableView.dataSource = self

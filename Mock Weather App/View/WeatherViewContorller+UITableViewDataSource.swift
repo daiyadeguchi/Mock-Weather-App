@@ -38,7 +38,7 @@ extension WeatherViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             return 300
         } else if indexPath.section == 1 {
-            return 80
+            return 100
         } else if indexPath.section == 2 {
             return 300
         }

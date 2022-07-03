@@ -9,6 +9,14 @@ import UIKit
 
 class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var containerView: UIView = {
+        var container = UIView()
+        container.layer.cornerRadius = 10
+        container.backgroundColor = .gray.withAlphaComponent(0.3)
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
+    }()
+    
     lazy var weatherCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -33,14 +41,22 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     private func setupWeatherCollectionView() {
-        contentView.addSubview(weatherCollectionView)
+        contentView.addSubview(containerView)
+        containerView.addSubview(weatherCollectionView)
         weatherCollectionView.register(HourlyWeatherCellCVCell.self, forCellWithReuseIdentifier: "cellId")
         
         NSLayoutConstraint.activate([
-            weatherCollectionView.topAnchor.constraint(equalTo: topAnchor),
-            weatherCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            weatherCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            weatherCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            
+            containerView.topAnchor.constraint(equalTo: topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            weatherCollectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            weatherCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            weatherCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            weatherCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            
         ])
     }
     

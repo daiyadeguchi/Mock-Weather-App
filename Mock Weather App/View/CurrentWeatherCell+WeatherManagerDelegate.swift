@@ -10,7 +10,7 @@ import UIKit
 extension CurrentWeatherCell: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         DispatchQueue.main.async {
-            self.backgroundColor = weather.backgroundColor
+//            self.backgroundColor = weather.backgroundColor
             
             // Setup top/current weather view
             let attributedText = NSMutableAttributedString(string: weather.cityName, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25)])
