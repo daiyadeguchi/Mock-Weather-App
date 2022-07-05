@@ -20,6 +20,7 @@ class HourlyWeatherCellCVCell: UICollectionViewCell {
         let image = UIImageView()
         image.image = UIImage(systemName: "sun.max") ?? UIImage()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.tintColor = .label
         return image
     }()
     

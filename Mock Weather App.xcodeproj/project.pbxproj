@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8172873C07A00D73052 /* TenDayForecastCell.swift */; };
+		544ED81A2873C1D900D73052 /* TenDayForecastCellTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */; };
 		54FB409828652717000E9173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409728652717000E9173 /* AppDelegate.swift */; };
 		54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409928652717000E9173 /* SceneDelegate.swift */; };
 		54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409B28652717000E9173 /* WeatherViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		544ED8172873C07A00D73052 /* TenDayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCell.swift; sourceTree = "<group>"; };
+		544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCellTVCell.swift; sourceTree = "<group>"; };
 		54FB409428652717000E9173 /* Mock Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mock Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FB409728652717000E9173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FB409928652717000E9173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				54FB40BC2869241F000E9173 /* CurrentWeatherCell+WeatherManagerDelegate.swift */,
 				54FB40C2286D1DA4000E9173 /* HourlyWeatherCell.swift */,
 				54FB40C4286D2EE1000E9173 /* HourlyWeatherCellCVCell.swift */,
+				544ED8172873C07A00D73052 /* TenDayForecastCell.swift */,
+				544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				54FB40C3286D1DA4000E9173 /* HourlyWeatherCell.swift in Sources */,
 				54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */,
 				54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */,
+				544ED81A2873C1D900D73052 /* TenDayForecastCellTVCell.swift in Sources */,
 				54FB409828652717000E9173 /* AppDelegate.swift in Sources */,
 				54FB40B52867E673000E9173 /* WeatherManager.swift in Sources */,
 				54FB40C1286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift in Sources */,
@@ -197,6 +204,7 @@
 				54FB40BB2867EFDB000E9173 /* WeatherModel.swift in Sources */,
 				54FB40BF286BB375000E9173 /* CurrentWeatherCell.swift in Sources */,
 				54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */,
+				544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

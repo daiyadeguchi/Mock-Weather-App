@@ -28,7 +28,7 @@ extension WeatherViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: hourlyWeatherCellId, for: indexPath) as! HourlyWeatherCell
             return cell
         } else if indexPath.section == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: currentWeatherCellId, for: indexPath) as! CurrentWeatherCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: tenDayWeatherCellId, for: indexPath) as! TenDayForecastCell
             return cell
         }
         return UITableViewCell()
@@ -40,7 +40,7 @@ extension WeatherViewController: UITableViewDataSource {
         } else if indexPath.section == 1 {
             return 100
         } else if indexPath.section == 2 {
-            return 300
+            return 500
         }
         return 300.0
     }
