@@ -14,7 +14,7 @@ class CurrentWeatherCell: UITableViewCell {
     var containerView: UIView = {
         var container = UIView()
         container.layer.cornerRadius = 10
-        container.backgroundColor = .gray.withAlphaComponent(0.3)
+        container.backgroundColor = .gray.withAlphaComponent(0.1)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
