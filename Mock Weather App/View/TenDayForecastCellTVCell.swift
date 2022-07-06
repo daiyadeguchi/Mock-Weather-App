@@ -22,6 +22,8 @@ class TenDayForecastCellTVCell: UITableViewCell, WeatherManagerDelegate {
         var imageView = UIImageView()
         imageView.image = UIImage(systemName: "sun.max")
         imageView.tintColor = .label
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -42,37 +44,28 @@ class TenDayForecastCellTVCell: UITableViewCell, WeatherManagerDelegate {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .clear
         weatherManager.delegate = self
         weatherManager.fetchWeather(cityName: "Tokyo")
         setupCell()
     }
     
     private func setupCell() {
-        addSubview(day)
-        addSubview(weatherImage)
-        addSubview(minTemp)
-        addSubview(maxTemp)
         
+        let tempStack = UIStackView(arrangedSubviews: [minTemp, maxTemp])
+        tempStack.translatesAutoresizingMaskIntoConstraints = false
+        tempStack.distribution = .fillEqually
+        
+        let forecastStack = UIStackView(arrangedSubviews: [day, weatherImage, tempStack])
+        forecastStack.translatesAutoresizingMaskIntoConstraints = false
+        forecastStack.distribution = .fillEqually
+        
+        addSubview(forecastStack)
         NSLayoutConstraint.activate([
-            day.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            day.leadingAnchor.constraint(equalTo: leadingAnchor),
-            day.trailingAnchor.constraint(equalTo: weatherImage.leadingAnchor),
-            day.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            
-            weatherImage.topAnchor.constraint(equalTo: topAnchor),
-            weatherImage.leadingAnchor.constraint(equalTo: day.trailingAnchor),
-            weatherImage.trailingAnchor.constraint(equalTo: minTemp.leadingAnchor),
-            weatherImage.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            minTemp.topAnchor.constraint(equalTo: topAnchor),
-            minTemp.leadingAnchor.constraint(equalTo: weatherImage.trailingAnchor),
-            minTemp.trailingAnchor.constraint(equalTo: maxTemp.leadingAnchor),
-            minTemp.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            maxTemp.topAnchor.constraint(equalTo: topAnchor),
-            maxTemp.leadingAnchor.constraint(equalTo: minTemp.trailingAnchor),
-            maxTemp.trailingAnchor.constraint(equalTo: trailingAnchor),
-            maxTemp.bottomAnchor.constraint(equalTo: bottomAnchor)
+            forecastStack.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+            forecastStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            forecastStack.trailingAnchor.constraint(equalTo: trailingAnchor),
+            forecastStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15)
         ])
     }
     
