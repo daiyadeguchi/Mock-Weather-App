@@ -15,17 +15,11 @@ class TenDayForecastCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         table.delegate = self
         table.dataSource = self
         table.allowsSelection = false
+        table.layer.cornerRadius = 10
+        table.backgroundColor = .gray.withAlphaComponent(0.1)
         table.translatesAutoresizingMaskIntoConstraints = false
         
         return table
-    }()
-    
-    var containerView: UIView = {
-        var container = UIView()
-        container.layer.cornerRadius = 10
-        container.backgroundColor = .gray.withAlphaComponent(0.1)
-        container.translatesAutoresizingMaskIntoConstraints = false
-        return container
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -34,26 +28,17 @@ class TenDayForecastCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
     }
     
     private func setupTableView() {
-        
-        
-        setupContainer()
+        setupTable()
         tableView.register(TenDayForecastCellTVCell.self, forCellReuseIdentifier: "cell")
     }
     
-    private func setupContainer() {
-        addSubview(containerView)
-        containerView.addSubview(tableView)
-        
+    private func setupTable() {
+        addSubview(tableView)
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
@@ -61,6 +46,8 @@ class TenDayForecastCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+//MARK: - UITableView
 
 extension TenDayForecastCell {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
