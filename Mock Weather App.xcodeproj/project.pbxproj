@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8172873C07A00D73052 /* TenDayForecastCell.swift */; };
 		544ED81A2873C1D900D73052 /* TenDayForecastCellTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */; };
+		544ED8202877987D00D73052 /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED81F2877987D00D73052 /* ForecastManager.swift */; };
+		544ED826287906C500D73052 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED825287906C500D73052 /* ForecastData.swift */; };
 		54FB409828652717000E9173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409728652717000E9173 /* AppDelegate.swift */; };
 		54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409928652717000E9173 /* SceneDelegate.swift */; };
 		54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409B28652717000E9173 /* WeatherViewController.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		544ED8172873C07A00D73052 /* TenDayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCell.swift; sourceTree = "<group>"; };
 		544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCellTVCell.swift; sourceTree = "<group>"; };
+		544ED81F2877987D00D73052 /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
+		544ED825287906C500D73052 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		54FB409428652717000E9173 /* Mock Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mock Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FB409728652717000E9173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FB409928652717000E9173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				54FB40B62867EDBA000E9173 /* OpenWeather-Info.plist */,
 				54FB40B82867EFAE000E9173 /* WeatherData.swift */,
 				54FB40BA2867EFDB000E9173 /* WeatherModel.swift */,
+				544ED81F2877987D00D73052 /* ForecastManager.swift */,
+				544ED825287906C500D73052 /* ForecastData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,8 +208,10 @@
 				54FB40C1286BC13B000E9173 /* WeatherViewContorller+UITableViewDataSource.swift in Sources */,
 				54FB40C5286D2EE1000E9173 /* HourlyWeatherCellCVCell.swift in Sources */,
 				54FB40BB2867EFDB000E9173 /* WeatherModel.swift in Sources */,
+				544ED8202877987D00D73052 /* ForecastManager.swift in Sources */,
 				54FB40BF286BB375000E9173 /* CurrentWeatherCell.swift in Sources */,
 				54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */,
+				544ED826287906C500D73052 /* ForecastData.swift in Sources */,
 				544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
