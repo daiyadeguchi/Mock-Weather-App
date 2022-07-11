@@ -7,14 +7,13 @@
 
 import UIKit
 
-class HourlyWeatherCellCVCell: UICollectionViewCell, ForecastManagerDelegate {
-    
-    var manager = ForecastManager()
+class HourlyWeatherCellCVCell: UICollectionViewCell {
     
     let timeLabel: UILabel = {
         let label = UILabel()
         label.text = "12"
         label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -37,9 +36,6 @@ class HourlyWeatherCellCVCell: UICollectionViewCell, ForecastManagerDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        manager.delegate = self
-        manager.fetchForecast(cityName: "Tokyo")
         
         addSubview(timeLabel)
         addSubview(weatherImage)
@@ -66,14 +62,5 @@ class HourlyWeatherCellCVCell: UICollectionViewCell, ForecastManagerDelegate {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension HourlyWeatherCellCVCell {
-    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: WeatherModel) {
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
     }
 }

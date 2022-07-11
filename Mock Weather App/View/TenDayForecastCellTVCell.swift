@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TenDayForecastCellTVCell: UITableViewCell, WeatherManagerDelegate {
+class TenDayForecastCellTVCell: UITableViewCell, ForecastManagerDelegate {
     
-    var weatherManager = WeatherManager()
+    var forecastManager = ForecastManager()
     
     let day: UILabel = {
         var day = UILabel()
@@ -45,8 +45,8 @@ class TenDayForecastCellTVCell: UITableViewCell, WeatherManagerDelegate {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
-        weatherManager.delegate = self
-        weatherManager.fetchWeather(cityName: "Tokyo")
+        forecastManager.delegate = self
+        forecastManager.fetchForecast(cityName: "Tokyo")
         setupCell()
     }
     
@@ -76,7 +76,7 @@ class TenDayForecastCellTVCell: UITableViewCell, WeatherManagerDelegate {
 }
 
 extension TenDayForecastCellTVCell {
-    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: Array<ForecastModel?>) {
         
     }
     
