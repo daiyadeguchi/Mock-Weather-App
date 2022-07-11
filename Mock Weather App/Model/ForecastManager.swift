@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ForecastManagerDelegate {
-    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: WeatherModel)
+    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: Array<ForecastModel?>)
     func didFailWithError(error: Error)
 }
 
@@ -57,18 +57,23 @@ struct ForecastManager {
         }
     }
     
-    func parseJSON(_ forecastData: Data) -> WeatherModel? {
+    func parseJSON(_ forecastData: Data) -> Array<ForecastModel?>? {
         let decoder = JSONDecoder()
+        var list = Array<ForecastModel?>()
         do {
             let decodedData = try decoder.decode(ForecastData.self, from: forecastData)
-            let id = decodedData.list[0].weather[0].id
-            let temp = decodedData.list[0].main.temp
-            let tempMin = decodedData.list[0].main.temp_min
-            let tempMax = decodedData.list[0].main.temp_max
-            print(decodedData.list)
             
-            let forecast = WeatherModel(conditionId: id, cityName: "Tokyo", temperature: temp, tempMin: tempMin, tempMax:tempMax)
-            return forecast
+            for data in decodedData.list {
+                let id = data.weather[0].id
+                let temp = String.init(format: "%.0f", data.main.temp)
+                let tempMin = data.main.temp_min
+                let tempMax = data.main.temp_max
+                let date = data.dt_txt
+                
+                let forecast = ForecastModel(conditionId: id, temp: temp, tempMin: tempMin, tempMax: tempMax, date: date)
+                list.append(forecast)
+            }
+            return list
         } catch {
             delegate?.didFailWithError(error: error)
             return nil
