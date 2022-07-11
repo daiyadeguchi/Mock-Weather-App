@@ -64,44 +64,6 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
         ])
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 24
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! HourlyWeatherCellCVCell
-        
-        if !list.isEmpty {
-            if let item = list[indexPath.row] {
-                if indexPath.row == 0 {
-                    cell.timeLabel.text = "Today"
-                }
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                let date = dateFormatter.date(from: item.date)
-                print(date)
-                cell.weatherImage.image = UIImage(systemName: item.conditionName)
-                cell.tempLabel.text = item.temp
-            }
-        }
-        return cell
-    }
-    
-    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: Array<ForecastModel?>) {
-        DispatchQueue.main.async {
-            for numberOfCell in 0...23 {
-                if let item = forecast[numberOfCell] {
-                    self.list.append(ForecastModel(conditionId: item.conditionId, temp: String(item.temp), tempMin: item.tempMin, tempMax: item.tempMax, date: item.date))
-                }
-            }
-            self.weatherCollectionView.reloadData()
-        }
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

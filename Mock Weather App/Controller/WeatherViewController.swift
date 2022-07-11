@@ -16,7 +16,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate {
     var tableView: UITableView = UITableView()
     
     let sectionTitle = [
-        "", "🕘 HOURLY FORECAST", "🗓 10-DAY FORECAST"
+        "", "🕘 3 HOUR FORECAST", "🗓 10-DAY FORECAST"
     ]
 
     override func viewDidLoad() {
