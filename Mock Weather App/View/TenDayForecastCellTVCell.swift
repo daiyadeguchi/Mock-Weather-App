@@ -7,9 +7,7 @@
 
 import UIKit
 
-class TenDayForecastCellTVCell: UITableViewCell, ForecastManagerDelegate {
-    
-    var forecastManager = ForecastManager()
+class TenDayForecastCellTVCell: UITableViewCell {
     
     let day: UILabel = {
         var day = UILabel()
@@ -45,8 +43,6 @@ class TenDayForecastCellTVCell: UITableViewCell, ForecastManagerDelegate {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
-        forecastManager.delegate = self
-        forecastManager.fetchForecast(cityName: "Tokyo")
         setupCell()
     }
     
@@ -73,14 +69,4 @@ class TenDayForecastCellTVCell: UITableViewCell, ForecastManagerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-extension TenDayForecastCellTVCell {
-    func didUpdateWeather(_ forecastManager: ForecastManager, forecast: Array<ForecastModel?>) {
-        
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
 }

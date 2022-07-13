@@ -40,7 +40,7 @@ extension WeatherViewController: UITableViewDataSource {
         } else if indexPath.section == 1 {
             return 100
         } else if indexPath.section == 2 {
-            return 506
+            return 253
         }
         return 300.0
     }
