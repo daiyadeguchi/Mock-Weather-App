@@ -10,8 +10,8 @@ import Foundation
 struct ForecastModel {
     let conditionId: Int
     let temp: String
-    let tempMin: Double
-    let tempMax:Double
+    let tempMin: String
+    let tempMax: String
     let date: String
     
     var conditionName: String {

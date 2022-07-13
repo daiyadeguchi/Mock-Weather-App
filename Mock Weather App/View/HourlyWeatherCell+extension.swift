@@ -43,7 +43,7 @@ extension HourlyWeatherCell {
         DispatchQueue.main.async {
             for numberOfCell in 0...23 {
                 if let item = forecast[numberOfCell] {
-                    self.list.append(ForecastModel(conditionId: item.conditionId, temp: String(item.temp), tempMin: item.tempMin, tempMax: item.tempMax, date: item.date))
+                    self.list.append(ForecastModel(conditionId: item.conditionId, temp: item.temp, tempMin: item.tempMin, tempMax: item.tempMax, date: item.date))
                 }
             }
             self.weatherCollectionView.reloadData()

@@ -41,16 +41,15 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         manager.delegate = self
         manager.fetchForecast(cityName: "Tokyo")
-        setupWeatherCollectionView()
+        setupView()
     }
     
-    private func setupWeatherCollectionView() {
+    private func setupView() {
         contentView.addSubview(containerView)
         containerView.addSubview(weatherCollectionView)
         weatherCollectionView.register(HourlyWeatherCellCVCell.self, forCellWithReuseIdentifier: "cellId")
         
         NSLayoutConstraint.activate([
-            
             containerView.topAnchor.constraint(equalTo: topAnchor),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
@@ -60,7 +59,6 @@ class HourlyWeatherCell: UITableViewCell, UICollectionViewDelegate, UICollection
             weatherCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             weatherCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             weatherCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-            
         ])
     }
     

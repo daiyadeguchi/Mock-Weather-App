@@ -66,8 +66,8 @@ struct ForecastManager {
             for data in decodedData.list {
                 let id = data.weather[0].id
                 let temp = String.init(format: "%.0f", data.main.temp)
-                let tempMin = data.main.temp_min
-                let tempMax = data.main.temp_max
+                let tempMin = String.init(format: "%.0f", data.main.temp_min)
+                let tempMax = String.init(format: "%.0f", data.main.temp_max)
                 let date = data.dt_txt
                 
                 let forecast = ForecastModel(conditionId: id, temp: temp, tempMin: tempMin, tempMax: tempMax, date: date)
