@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TenDayForecastCellTVCell: UITableViewCell {
+class FiveDayForecastCellTVCell: UITableViewCell {
     
     let day: UILabel = {
         var day = UILabel()
@@ -47,7 +47,6 @@ class TenDayForecastCellTVCell: UITableViewCell {
     }
     
     private func setupCell() {
-        
         let tempStack = UIStackView(arrangedSubviews: [minTemp, maxTemp])
         tempStack.translatesAutoresizingMaskIntoConstraints = false
         tempStack.distribution = .fillEqually

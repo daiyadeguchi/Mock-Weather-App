@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8172873C07A00D73052 /* TenDayForecastCell.swift */; };
-		544ED81A2873C1D900D73052 /* TenDayForecastCellTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */; };
+		544ED8182873C07A00D73052 /* FiveDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8172873C07A00D73052 /* FiveDayForecast.swift */; };
+		544ED81A2873C1D900D73052 /* FiveDayForecastCellTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED8192873C1D900D73052 /* FiveDayForecastCellTVCell.swift */; };
 		544ED8202877987D00D73052 /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED81F2877987D00D73052 /* ForecastManager.swift */; };
 		544ED826287906C500D73052 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED825287906C500D73052 /* ForecastData.swift */; };
 		544ED828287A53CF00D73052 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED827287A53CF00D73052 /* ForecastModel.swift */; };
 		544ED82A287CCF4F00D73052 /* HourlyWeatherCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED829287CCF4F00D73052 /* HourlyWeatherCell+extension.swift */; };
+		544ED82C2880CD6400D73052 /* FiveDayForecastCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544ED82B2880CD6400D73052 /* FiveDayForecastCell+extension.swift */; };
 		54FB409828652717000E9173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409728652717000E9173 /* AppDelegate.swift */; };
 		54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409928652717000E9173 /* SceneDelegate.swift */; };
 		54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB409B28652717000E9173 /* WeatherViewController.swift */; };
@@ -30,12 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		544ED8172873C07A00D73052 /* TenDayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCell.swift; sourceTree = "<group>"; };
-		544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDayForecastCellTVCell.swift; sourceTree = "<group>"; };
+		544ED8172873C07A00D73052 /* FiveDayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayForecast.swift; sourceTree = "<group>"; };
+		544ED8192873C1D900D73052 /* FiveDayForecastCellTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayForecastCellTVCell.swift; sourceTree = "<group>"; };
 		544ED81F2877987D00D73052 /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		544ED825287906C500D73052 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		544ED827287A53CF00D73052 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		544ED829287CCF4F00D73052 /* HourlyWeatherCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HourlyWeatherCell+extension.swift"; sourceTree = "<group>"; };
+		544ED82B2880CD6400D73052 /* FiveDayForecastCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FiveDayForecastCell+extension.swift"; sourceTree = "<group>"; };
 		54FB409428652717000E9173 /* Mock Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mock Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FB409728652717000E9173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FB409928652717000E9173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +115,9 @@
 				54FB40C2286D1DA4000E9173 /* HourlyWeatherCell.swift */,
 				544ED829287CCF4F00D73052 /* HourlyWeatherCell+extension.swift */,
 				54FB40C4286D2EE1000E9173 /* HourlyWeatherCellCVCell.swift */,
-				544ED8172873C07A00D73052 /* TenDayForecastCell.swift */,
-				544ED8192873C1D900D73052 /* TenDayForecastCellTVCell.swift */,
+				544ED8172873C07A00D73052 /* FiveDayForecast.swift */,
+				544ED82B2880CD6400D73052 /* FiveDayForecastCell+extension.swift */,
+				544ED8192873C1D900D73052 /* FiveDayForecastCellTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,10 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FB40BD2869241F000E9173 /* CurrentWeatherCell+WeatherManagerDelegate.swift in Sources */,
+				544ED82C2880CD6400D73052 /* FiveDayForecastCell+extension.swift in Sources */,
 				54FB40C3286D1DA4000E9173 /* HourlyWeatherCell.swift in Sources */,
 				54FB409C28652717000E9173 /* WeatherViewController.swift in Sources */,
 				54FB40B92867EFAE000E9173 /* WeatherData.swift in Sources */,
-				544ED81A2873C1D900D73052 /* TenDayForecastCellTVCell.swift in Sources */,
+				544ED81A2873C1D900D73052 /* FiveDayForecastCellTVCell.swift in Sources */,
 				54FB409828652717000E9173 /* AppDelegate.swift in Sources */,
 				544ED828287A53CF00D73052 /* ForecastModel.swift in Sources */,
 				54FB40B52867E673000E9173 /* WeatherManager.swift in Sources */,
@@ -220,7 +224,7 @@
 				54FB40BF286BB375000E9173 /* CurrentWeatherCell.swift in Sources */,
 				54FB409A28652717000E9173 /* SceneDelegate.swift in Sources */,
 				544ED826287906C500D73052 /* ForecastData.swift in Sources */,
-				544ED8182873C07A00D73052 /* TenDayForecastCell.swift in Sources */,
+				544ED8182873C07A00D73052 /* FiveDayForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
