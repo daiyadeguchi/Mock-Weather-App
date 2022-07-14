@@ -28,7 +28,7 @@ extension WeatherViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: hourlyWeatherCellId, for: indexPath) as! HourlyWeatherCell
             return cell
         } else if indexPath.section == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: tenDayWeatherCellId, for: indexPath) as! TenDayForecastCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: tenDayWeatherCellId, for: indexPath) as! FiveDayForecast
             return cell
         }
         return UITableViewCell()

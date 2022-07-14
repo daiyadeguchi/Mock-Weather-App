@@ -30,7 +30,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate {
         
         tableView.register(CurrentWeatherCell.self, forCellReuseIdentifier: currentWeatherCellId)
         tableView.register(HourlyWeatherCell.self, forCellReuseIdentifier: hourlyWeatherCellId)
-        tableView.register(TenDayForecastCell.self, forCellReuseIdentifier: tenDayWeatherCellId)
+        tableView.register(FiveDayForecast.self, forCellReuseIdentifier: tenDayWeatherCellId)
     }
     
 }
