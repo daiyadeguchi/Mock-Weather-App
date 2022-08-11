@@ -3,7 +3,8 @@
 <br>This is a weather app personal project. I made this app to learn how to write UIKit app programmatically.
 <br><em>*Only Tokyo weather data at this point!</em>
 <br>*Location based data and search function is coming up</p>
-<div align="center"><img src="demo.gif"></img></div>
+<div align="center"><img width="250" alt="Screen Shot 2022-08-12 at 8 18 16" src="https://user-images.githubusercontent.com/49153094/184258130-596a1767-66f8-46e9-a730-aeccd7834a65.png"></img><img width="250" alt="Screen Shot 2022-08-12 at 8 18 47" src="https://user-images.githubusercontent.com/49153094/184258219-4a99806a-198b-4c76-9357-58dea174c6e7.png">
+</div>
 <h2>About</h2>
 
 Simple weather app to fetch weather data from OpenWeatherAPI. <br/>
