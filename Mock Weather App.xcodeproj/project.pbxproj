@@ -125,8 +125,8 @@
 		54FB40B32867E64C000E9173 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				54FB40B42867E673000E9173 /* WeatherManager.swift */,
 				54FB40B62867EDBA000E9173 /* OpenWeather-Info.plist */,
+				54FB40B42867E673000E9173 /* WeatherManager.swift */,
 				54FB40B82867EFAE000E9173 /* WeatherData.swift */,
 				54FB40BA2867EFDB000E9173 /* WeatherModel.swift */,
 				544ED81F2877987D00D73052 /* ForecastManager.swift */,

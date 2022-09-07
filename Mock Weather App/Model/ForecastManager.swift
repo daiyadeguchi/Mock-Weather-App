@@ -27,6 +27,7 @@ struct ForecastManager {
     func fetchForecast(cityName: String) {
         let urlString = "https://api.openweathermap.org/data/2.5/forecast?appid=\(apiKey)&units=metric&q=\(cityName)"
         if let safeURL = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            print(safeURL)
             performRequest(with: safeURL)
         }
     }
