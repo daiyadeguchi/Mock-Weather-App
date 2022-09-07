@@ -46,6 +46,7 @@ extension HourlyWeatherCell {
                     self.list.append(ForecastModel(conditionId: item.conditionId, temp: item.temp, tempMin: item.tempMin, tempMax: item.tempMax, date: item.date))
                 }
             }
+            print(Date())
             self.weatherCollectionView.reloadData()
         }
     }
