@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITextFieldD
     lazy var searchTextField: UITextField = {
         var tf = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         tf.backgroundColor = .secondarySystemBackground
+        tf.placeholder = "Enter City Name"
         
         tf.leftViewMode = .always
         let imageview = UIImageView(frame: CGRect(x: 50, y: 0, width: 20, height: 20))
